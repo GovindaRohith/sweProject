@@ -5,9 +5,7 @@ const db = require('./db.js');
 
 
 router.get('/', (req, res) => {
-    res.sendFile("This is route1 page");
+    res.sendFile("This is login page");
 });
 
 module.exports = router;
-
-

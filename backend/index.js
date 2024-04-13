@@ -25,9 +25,9 @@ app.get('/',(req, res)=>{
 app.post('/',(req, res)=>{
   res.send("This is home page")
 })
-const route1=require("./src/events.js")
+const login=require("./src/login")
 
-app.use('/route1',route1)
+app.use('/login',login)
 
 
 app.listen(port, function(){

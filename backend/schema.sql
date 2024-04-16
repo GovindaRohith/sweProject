@@ -3,13 +3,13 @@ create database hrms;
 use hrms;
 
 create table users (
-    id VARCHAR(255) primary key,
-    username varchar(255) not null,
-    password varchar(255) not null,
-    room_number INT,
-    -- room number in format A111
-    phone_number INT
-);
+         id VARCHAR(255) primary key,
+         username varchar(255) not null,
+         password varchar(255) not null,
+        room_number varchar(5) not null,
+       -- room number in format A111
+        phone_number BIGINT
+     );
 
 create table announcements (
     id VARCHAR(255) not null,

@@ -6,7 +6,7 @@ create table users (
          id VARCHAR(255) primary key,
          username varchar(255) not null,
          password varchar(255) not null,
-        room_number varchar(5) not null,
+        room_number varchar(255) not null,
        -- room number in format A111
         phone_number BIGINT
      );
@@ -34,47 +34,47 @@ create table hostel_blocks (
 
 
 CREATE TABLE IF NOT EXISTS check_in (
-    id INT NOT NULL,
+    id VARCHAR(255) not null,
     created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     duration INT NOT NULL,
-    reason VARCHAR(255),
-    file_upload VARCHAR(255),
-    title VARCHAR(255),
+    reason VARCHAR(255) not null,
+    file_upload VARCHAR(255) not null,
+    title VARCHAR(255) not null,
     primary key(id, created_time)
 );
 
 CREATE TABLE IF NOT EXISTS room_exchange (
-    id INT NOT NULL,
+    id VARCHAR(255) not null,
     created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     room_exchange_description VARCHAR(255),
-    room_number_from INT NOT NULL,
-    room_number_to INT NOT NULL,
+    room_number_from varchar(255) not null,
+    room_number_to varchar(255) not null,
     primary key(id, created_time)
 );
 
 
 CREATE TABLE floors (
-    floor_number VARCHAR(10) PRIMARY KEY NOT NULL,
-    lift_working_status BOOLEAN,
-    lift_last_serviced TIMESTAMP,
-    washing_machine_working_status BOOLEAN,
-    washing_machine_last_serviced TIMESTAMP,
-    water_purifier_working_status BOOLEAN,
-    water_purifier_last_serviced TIMESTAMP,
-    bathroom_working_status BOOLEAN,
-    bathroom_last_serviced TIMESTAMP,
-    housekeeping_working_status BOOLEAN,
-    housekeeping_last_serviced TIMESTAMP
+    floor_number VARCHAR(255) PRIMARY KEY NOT NULL,
+    lift_working_status BOOLEAN not null,
+    lift_last_serviced TIMESTAMP not null,
+    washing_machine_working_status BOOLEAN not null,
+    washing_machine_last_serviced TIMESTAMP not null,
+    water_purifier_working_status BOOLEAN not null,
+    water_purifier_last_serviced TIMESTAMP not null,
+    bathroom_working_status BOOLEAN not null,
+    bathroom_last_serviced TIMESTAMP not null,
+    housekeeping_working_status BOOLEAN not null,
+    housekeeping_last_serviced TIMESTAMP not null
 );
 
 
 CREATE TABLE rooms (
-    room_no VARCHAR(5) NOT NULL PRIMARY KEY, -- Primary key in the format A123
-    lan_status BOOLEAN,
-    electrical BOOLEAN,
-    furniture BOOLEAN,
-    occupied BOOLEAN,
-    leave_room BOOLEAN
+    room_no VARCHAR(255) NOT NULL PRIMARY KEY, -- Primary key in the format A123
+    lan_status BOOLEAN not null,
+    electrical BOOLEAN not null,
+    furniture BOOLEAN not null,
+    occupied BOOLEAN not null,
+    leave_room BOOLEAN not null
 );
 
 
@@ -85,9 +85,9 @@ CREATE TABLE tickets (
     title VARCHAR(255) NOT NULL,
     ticket_description VARCHAR(255) NOT NULL,
     file_upload VARCHAR(255) NOT NULL,
-    ticket_status BOOLEAN,
+    ticket_status BOOLEAN not null,
     reply VARCHAR(255),
-    filtered BOOLEAN,
+    filtered BOOLEAN not null,
     PRIMARY KEY (id, raised_time)
 );
 

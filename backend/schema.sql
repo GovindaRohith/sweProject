@@ -70,7 +70,7 @@ CREATE TABLE floors (
 
 CREATE TABLE rooms (
     room_no VARCHAR(5) NOT NULL PRIMARY KEY, -- Primary key in the format A123
-    lan statusBOOLEAN,
+    lan_status BOOLEAN,
     electrical BOOLEAN,
     furniture BOOLEAN,
     occupied BOOLEAN,

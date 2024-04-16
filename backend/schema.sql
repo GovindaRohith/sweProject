@@ -33,7 +33,7 @@ create table hostel_blocks (
 );
 
 
-CREATE TABLE IF NOT EXISTS check_in (
+CREATE TABLE  check_in (
     id VARCHAR(255) not null,
     created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     duration INT NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS check_in (
     primary key(id, created_time)
 );
 
-CREATE TABLE IF NOT EXISTS room_exchange (
+CREATE TABLE  room_exchange (
     id VARCHAR(255) not null,
     created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     room_exchange_description VARCHAR(255),

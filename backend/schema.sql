@@ -79,16 +79,16 @@ CREATE TABLE rooms (
 
 
 CREATE TABLE tickets (
-    id VARCHAR(255) NOT NULL,
-    raised_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    tag INT NOT NULL,
-    title VARCHAR(255) NOT NULL,
-    ticket_description VARCHAR(255) NOT NULL,
-    file_upload VARCHAR(255) NOT NULL,
-    ticket_status BOOLEAN not null,
-    reply VARCHAR(255),
-    filtered BOOLEAN not null,
-    PRIMARY KEY (id, raised_time)
+  id VARCHAR(255) NOT NULL,
+  raised_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  tag ENUM('lift', 'washing_machine', 'water_filter', 'bathroom', 'house_keeping', 'lan_status', 'electrical', 'furniture', 'civil_complaints', 'pest_control', 'green_office') NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  ticket_description VARCHAR(255) NOT NULL,
+  file_upload VARCHAR(255) NOT NULL,
+  ticket_status BOOLEAN NOT NULL,
+  reply VARCHAR(255),
+  filtered BOOLEAN NOT NULL,
+  PRIMARY KEY (id, raised_time)
 );
 
 

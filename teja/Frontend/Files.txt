@@ -1,0 +1,11 @@
+HR checkin/out:
+display_tickets.js, ticket_details.js => for HR
+
+HO checkin/out:
+display_tickets_ho.js, ticket_details_ho.js => for HO
+
+Forgot password:
+App.js(forgot_password.js)
+
+Search student:
+App.js(hostel_blocks.js) backend: floor.js, floor_pod.js, hostel_blocks.js
